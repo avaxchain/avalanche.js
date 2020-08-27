@@ -535,8 +535,8 @@ export class AVMAPI extends JRPCAPI {
     persistOpts:PersistanceOptions = undefined
   ):Promise<UTXOSet> => {
 
-    if(typeof addresses === "string") {
-      addresses = [addresses];
+    if(typeof addresses[0] === "string") {
+      addresses = addresses;
     }
 
     const params:any = {
